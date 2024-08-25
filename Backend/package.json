@@ -1,0 +1,27 @@
+{
+  "name": "js-jwt-auth-footballdatabase",
+  "version": "1.0.0",
+  "description": "Node.js backend with JWT Authenthication for Football-Database",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "jwt",
+    "authentication",
+    "mysql"
+  ],
+  "author": "Lukas Kirchberg",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "nodemon": "^3.1.4",
+    "sequelize": "^6.37.3"
+  }
+}
