@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <header class="jumbotron">
+  <div class="">
+    <!-- <header class="jumbotron">
       <h3>{{ content }}</h3>
-    </header>
+    </header> -->
     <main>
-        <p>Willkommen bei der Football Database!</p>
+        <h3>Hey, this is our Homepage</h3>
     </main>
   </div>
 </template>
@@ -36,3 +36,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

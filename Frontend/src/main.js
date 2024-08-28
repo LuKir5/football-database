@@ -10,6 +10,7 @@ import * as directives from 'vuetify/directives'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import style from './assets/style.css'
 
 const vuetify = createVuetify({
     components,
@@ -20,4 +21,5 @@ createApp(App)
 .use(router)
 .use(store)
 .use(vuetify)
+.use(style)
 .mount('#app');
