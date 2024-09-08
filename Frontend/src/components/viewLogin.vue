@@ -1,31 +1,42 @@
 <template>
-  <Form @submit="handleLogin" :validation-schema="schema">
-        <div>
-          <label for="username">Username</label>
-          <Field name="username" type="text" />
-          <ErrorMessage name="username" class="error-feedback" />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <Field name="password" type="password" />
-          <ErrorMessage name="password" class="error-feedback" />
-        </div>
+  <Form @submit="handleLogin" :validation-schema="schema" class="loginform-container">
+    <h2 class="formheader">Login</h2>
 
-        <div>
-          <button :disabled="loading">
-            <span
-              v-show="loading"
-            ></span>
-            <span>Login</span>
-          </button>
-        </div>
+    <v-divider class="my-2"></v-divider>
 
-        <div>
-          <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
-          </div>
+      <div class="formfield">
+        <label for="username" class="formlabel">Username:</label>
+        <Field name="username" type="text" class="inputfield"/>
+        <br>
+        <ErrorMessage name="username" class="error-feedback"/>
+      </div>
+
+      <v-divider class="my-2"></v-divider>
+
+      <div class="formfield">
+        <label for="password" class="formlabel">Password:</label>
+        <Field name="password" type="password" class="inputfield"/>
+        <br>
+        <ErrorMessage name="password" class="error-feedback"/>
+      </div>
+
+      <v-divider class="my-2"></v-divider>
+
+      <div id="login-button-container" class="formfield">
+        <button :disabled="loading" class="submit-button elevation-12">
+          <span
+            v-show="loading"
+          ></span>
+          <span>Login</span>
+        </button>
+      </div>
+
+      <div>
+        <div v-if="message" class="alert alert-danger" role="alert">
+          {{ message }}
         </div>
-      </Form>
+      </div>
+  </Form>
 </template>
 
 <script>

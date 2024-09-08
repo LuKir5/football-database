@@ -1,29 +1,43 @@
 <template>
-    <Form @submit="handleRegister" :validation-schema="schema">
-        <div v-if="!successful">
-          <div>
-            <label for="username">Username</label>
-            <Field name="username" type="text" />
-            <ErrorMessage name="username" class="error-feedback" />
-          </div>
-          <div>
-            <label for="email">E-Mail</label>
-            <Field name="email" type="email" />
-            <ErrorMessage name="email" class="error-feedback" />
-          </div>
-          <div>
-            <label for="password">Password</label>
-            <Field name="password" type="password" />
-            <ErrorMessage name="password" class="error-feedback" />
-          </div>
-          <div>
-            <label for="password_repeat">Repeat Password</label>
-            <Field name="password_repeat" type="password" />
-            <ErrorMessage name="password_repeat" class="error-feedback" />
+    <Form @submit="handleRegister" :validation-schema="schema" class="registerform-container p-0">
+      <h2 class="formheader">Register</h2>
+        <div v-if="!successful" class="mx-auto">
+          <div class="formfield">
+            <label for="username" class="formlabel">Username:</label>
+            <Field name="username" type="text" class="inputfield"/>
+            <br>
+            <ErrorMessage name="username" class="error-feedback"/>
           </div>
 
-          <div>
-            <button :disabled="loading">
+          <v-divider class="my-2"></v-divider>
+
+          <div class="formfield">
+            <label for="email" class="formlabel">E-Mail:</label>
+            <Field name="email" type="email" class="inputfield"/>
+            <br>
+            <ErrorMessage name="email" class="error-feedback"/>
+          </div>
+
+          <v-divider class="my-2"></v-divider>
+
+          <div class="formfield">
+            <label for="password" class="formlabel">Password:</label>
+            <Field name="password" type="password" class="inputfield"/>
+            <br>
+            <ErrorMessage name="password" class="error-feedback"/>
+          </div>
+
+          <v-divider class="my-2"></v-divider>
+
+          <div class="formfield">
+            <label for="password_repeat" class="formlabel">Repeat Password:</label>
+            <Field name="password_repeat" type="password" class="inputfield"/>
+            <br>
+            <ErrorMessage name="password_repeat" class="error-feedback"/>
+          </div>
+
+          <div id="register-button-container" class="formfield">
+            <button :disabled="loading" class="submit-button elevation-12">
               <span
                 v-show="loading"
               ></span>
@@ -49,9 +63,9 @@ import * as yup from "yup";
 export default {
   name: "viewRegister",
   components: {
-    Form,
-    Field,
-    ErrorMessage,
+   Form,
+   Field,
+   ErrorMessage,
   },
   data() {
     const schema = yup.object().shape({

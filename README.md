@@ -1,8 +1,12 @@
 Football-Database
 
 Author: Lukas Kirchberg
-Status: in Entwicklung ....
+Status: In development ....
 Techstack: Vue3, Node.js
-Beschreibung: Frontend & Backend einer Anwendung mit Registrierungs- & Login-Funktion mit JWT Token. Das Projekt wird mit den Javascript Frameworks Vue.js (Frontend) und Node.js (Backend) entwickelt. Ziel ist es, dem User nach Registrierung & Anmeldung den Zugang zu einer sortierbaren Liste an Footballspielern zu ermöglichen.
+Beschreibung: The repository contains the Frontend & Backend of an application with registration & login function with JWT token. The project is developed using the Javascript frameworks Vue.js (frontend) and Node.js (backend). The aim is to give the user access to a sortable list of football players after registration and login. A user with the admin role can add, edit and delete players from this list.
+Make sure you have node.js and XAMPP for testing installed on your system, if you want to test the application.
 
-Lukas Kirchberg, 2024 
+Command to start backend: node server.js
+Command to start frontend: npm run serve
+
+Lukas Kirchberg, 2024

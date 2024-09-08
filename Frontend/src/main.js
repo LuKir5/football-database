@@ -11,6 +11,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import style from './assets/style.css'
+import 'material-icons/iconfont/material-icons.css';
 
 const vuetify = createVuetify({
     components,

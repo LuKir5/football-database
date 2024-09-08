@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-          <h1 class="font-weight-black text-center">Willkommen bei der Football Database!</h1>
+    <div class="header-container">
+          <h1 class="font-weight-black text-center">Welcome to the Football Database!</h1>
     </div>
 </template>
 
@@ -9,3 +9,6 @@ export default {
     name: "viewHeader",
 }
 </script>
+
+<style>
+</style>

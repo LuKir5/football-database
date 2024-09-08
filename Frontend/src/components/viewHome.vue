@@ -1,11 +1,14 @@
 <template>
-  <div class="">
-    <!-- <header class="jumbotron">
-      <h3>{{ content }}</h3>
-    </header> -->
+  <div class="v-container">
+    <header>
+      <h3>Hey, this is our Homepage</h3>
+    </header>
     <main>
-        <h3>Hey, this is our Homepage</h3>
+      
     </main>
+    <footer>
+
+    </footer>
   </div>
 </template>
 
